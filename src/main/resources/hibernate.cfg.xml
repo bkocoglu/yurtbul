@@ -23,5 +23,6 @@
     <mapping class="com.model.entities.Proposal"/>
       <mapping class="com.model.entities.AdvertType"/>
       <mapping class="com.model.entities.Advert"/>
+      <mapping class="com.model.entities.User"/>
   </session-factory>
 </hibernate-configuration>

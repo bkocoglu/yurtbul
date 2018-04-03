@@ -5,5 +5,16 @@
         "http://struts.apache.org/dtds/struts-2.1.7.dtd">
 
 <struts>
+    <package name="App" extends="struts-default">
+        <action name="createUser" class="com.controller.NewUser" method="execute">
+            <result name="success">/index.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+
+        <action name="createProposal" class="com.controller.ProposalPost2" method="execute">
+            <result name="success">/index.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+    </package>
 
 </struts>

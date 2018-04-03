@@ -10,7 +10,7 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 #menuButonu{
-	border: none:;
+	border: none;
 }
 #menuButonu:focus{
 	border:none;
@@ -98,7 +98,7 @@ input[type=text], input[type=password] {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 5% !important; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -245,7 +245,7 @@ input[type=text], input[type=password] {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
@@ -293,4 +293,8 @@ input[type=text], input[type=password] {
 .vitrinbox{
 	width: 100%;
 	height: 375px;
+}
+.newUserTexts{
+    width: 100%;
+    margin-right: 0px;
 }

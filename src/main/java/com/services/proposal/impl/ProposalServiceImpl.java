@@ -1,6 +1,8 @@
 package com.services.proposal.impl;
 
-import com.model.dao.proposal.impl.ProposalDaoImpl;
+import com.model.dao.global.GlobalMethods;
+import com.model.dao.global.impl.GlobalMethodsImpl;
+import com.model.dao.proposal.impl.ProposalMethodsImpl;
 import com.model.entities.Proposal;
 import com.services.proposal.ProposalService;
 
@@ -14,11 +16,11 @@ public class ProposalServiceImpl implements ProposalService{
     private ProposalServiceImpl() {
     }
 
-    ProposalDaoImpl proposalDao = ProposalDaoImpl.getInstance();
+    ProposalMethodsImpl proposalDao = ProposalMethodsImpl.getInstance();
+    GlobalMethodsImpl globalMethods = new GlobalMethodsImpl();
 
-    public boolean sendProposal(String email, String proposalText, boolean eMailCheck) {
-        Proposal proposal = new Proposal(email, proposalText, eMailCheck);
-        return proposalDao.save(proposal);
+    public boolean sendProposal(Proposal proposal) {
+        return globalMethods.save(proposal);
     }
 
     public Proposal getProposalById(int id) {

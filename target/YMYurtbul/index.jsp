@@ -7,23 +7,26 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/load"/>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Sitenin Tanıtımını Yapan Kelimeler">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <link rel="stylesheet" href="css/homePage.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="jquery/jquery-3.2.1.min.js"></script>
     <title>Ana Sayfa</title>
+    <style>
+        <jsp:directive.include file="css/homePage.css" />
+    </style>
 </head>
 <body class="font">
 
-<%=application.getAttribute("login")%>
 
 <!-- MENU -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light header">
@@ -60,6 +63,19 @@
     </div>
 </nav>
 
+
+<%
+    if (session.getAttribute("resultState")!=null){
+%>
+<div class="alert alert-primary" style="text-align: center;" role="alert">
+    <b><%=session.getAttribute("resultMessage")%><b>
+</div>
+
+<%
+        session.setAttribute("resultState",null);
+    }
+
+%>
 
 
 <!-- YAN MENU -->
@@ -389,7 +405,7 @@
 
 <%
     String loginStatus = (String) application.getAttribute("login");
-    if(loginStatus.equals("false")){
+    if(session.getAttribute("login")==null){
 
 %>
 
@@ -420,22 +436,22 @@
                         <!-- The Modal (contains the Sign Up form) -->
                         <div id="id01" class="modal">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <form class="modal-content animate">
+                            <form class="modal-content animate" action="createUser" >
                                 <div class="container">
-                                    <label><b>Email veya Kullanıcı Adı</b></label>
-                                    <input id="newUsername" type="text" placeholder="eMail veya Kullanıcı Adı" name="email" required>
+                                    <s:textfield id="newAd" cssClass="newUserTexts" name="newName" maxLength="50" required="true" label="Ad " placeholder="Ad " labelposition="top"/>
 
-                                    <label><b>Şifre</b></label>
-                                    <input id="newPassword" type="password" placeholder="Şifre" name="psw" required>
+                                    <s:textfield id="newSoyad" cssClass="newUserTexts" name="newLastName" maxLength="50" required="true" label="Soyad " placeholder="Soyad" labelposition="top"/>
 
-                                    <label><b>Şifre Tekrar</b></label>
-                                    <input id="newPasswordAgain" type="password" placeholder="Şifre Tekrar" name="psw-repeat" required>
-                                    <div class="clearfix">
-                                        <button class="btn btn-danger" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                                        <button id="newUserButton" type="submit" class="btn btn-success">Kayıt Ol</button>
-                                    </div>
+                                    <s:textfield id="newUsername" cssClass="newUserTexts" name="newEmail" maxLength="60" required="true" label="Email veya Kullanıcı Adı" placeholder="eMail veya Kullanıcı Adı" labelposition="top"/>
+
+                                    <s:textfield id="newPassword" cssClass="newUserTexts" name="newPass" maxLength="20" required="true" label="Şifre" placeholder="Şifre" labelposition="top"/>
+
+                                    <s:textfield id="newPasswordAgain" cssClass="newUserTexts" name="newPassAgain" maxLength="20" required="true" label="Şifre Tekrar" placeholder="Şifre Tekrar" labelposition="top"/>
+
+                                    <s:submit id="newUserButton" cssClass="btn btn-success" value="Kayıt Ol"/>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
@@ -469,7 +485,7 @@
 
         <%
             }
-            if (loginStatus.equals("true")){
+            if (session.getAttribute("login")!=null){
 
         %>
         <div class="col-md-3" id="login">
@@ -478,7 +494,7 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg" style="background-color: #F5F5F5; border-radius: 10px;">
                         <div id="uyeBilgileri2">
-                            <p style="margin-top: 5px;">Admin <span style="font-weight: bold;"><%=application.getAttribute("username")%></span></p>
+                            <p style="margin-top: 5px;">Admin <span style="font-weight: bold;"><%=session.getAttribute("login")%></span></p>
                             <a style="float: right; margin-top: 15px; margin-bottom: 15px; width: 100%;" class="btn btn-danger" href="#" role="button">Çıkış Yap</a>
                         </div>
 

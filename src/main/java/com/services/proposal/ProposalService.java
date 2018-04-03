@@ -4,7 +4,7 @@ import com.model.entities.Proposal;
 
 public interface ProposalService {
 
-    public boolean sendProposal(String email, String proposalText, boolean eMailCheck);
+    public boolean sendProposal(Proposal proposal);
 
     public Proposal getProposalById(int id);
 

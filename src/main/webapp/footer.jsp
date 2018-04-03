@@ -6,7 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <footer>
+
     <div class="row" id="bilgilendirme">
         <div class="col-sm" >
             <p style="margin-left: 2px; margin-right: 2px;">Yerleşeceğiniz şehirde zahmet çekmeden yeni yuvanızı bulun.</p>
@@ -22,19 +24,19 @@
             <div class="alert alert-success" role="alert" style="margin-top: 10px;margin-bottom: 10px;">
                 Tavsiye ve İsteklerinizi Bize İletin...
             </div>
-            <form class="was-validated" action="/proposal" method="get">
+            <form class="was-validated" action="createProposal" method="post">
                 <div class="form-group" style="margin-bottom: 10px;">
-                    <label for="validationServer03"></label>
-                    <input name="eMail" type="text" class="form-control is-invalid" id="eMail" placeholder="E-posta Adresi" maxlength="50" required>
-                    <label for="exampleFormControlTextarea1"></label>
-                    <textarea name="proposalText" class="form-control is-invalid" id="message" rows="4" maxlength="400" placeholder="Mesajınız" required></textarea>
+
+                    <s:textfield name="email" cssClass="form-control is-invalid" id="eMail" placeholder="E-posta Adresi" maxlength="50"/>
+
+                    <s:textarea name="proposalText" cssClass="form-control is-invalid" id="message" rows="4" maxlength="400" placeholder="Mesajınız"/>
                     <small id="emailHelp" class="form-text text-muted">E-posta adresiniz asla kimseyle paylaşılmayacaktır.</small>
                     <label class="custom-control custom-checkbox">
-                        <input name="eMailCheck" type="checkbox" class="custom-control-input is-valid">
+                        <s:checkbox name="emailcheck" cssClass="custom-control-input is-valid"/>
                         <span class="custom-control-indicator"></span>
                         <span style="margin-top: 5px;" class="custom-control-description">Bu adrese yurtbul.com bilgilendirme mailleri almak istiyorum.<br></span>
                     </label>
-                    <button type="submit" id="messageSendButton" style="cursor: pointer;" class="btn btn-primary">Gönder</button>
+                    <s:submit id="messageSendButton" cssStyle="cursor: pointer;" cssClass="btn btn-primary" value="Gönder"/>
                 </div>
             </form>
         </div>
