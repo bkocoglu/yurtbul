@@ -1,18 +1,19 @@
 package com.model.dao.global.impl;
 
 import com.model.dao.HibernateUtil;
-import com.model.dao.global.GlobalMethods;
+import com.model.dao.global.GlobalDao;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 
 import java.util.List;
 
-public class GlobalMethodsImpl implements GlobalMethods {
+public class GlobalDaoImpl implements GlobalDao {
     public boolean save(Object entity) {
         Session session = openSession();
         session.getTransaction().begin();
         try{
             session.save(entity);
+            System.out.println(session.getTransaction().getStatus());
             session.getTransaction().commit();
             return true;
         }catch (Exception e){

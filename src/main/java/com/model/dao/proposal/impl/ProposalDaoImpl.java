@@ -1,24 +1,22 @@
 package com.model.dao.proposal.impl;
 
 import com.model.dao.HibernateUtil;
-import com.model.dao.proposal.ProposalMethods;
+import com.model.dao.proposal.ProposalDao;
 import com.model.entities.Proposal;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 
 import java.util.Iterator;
-import java.util.List;
 
-public class ProposalMethodsImpl implements ProposalMethods {
-    private static ProposalMethodsImpl ourInstance = new ProposalMethodsImpl();
+public class ProposalDaoImpl implements ProposalDao {
+    private static ProposalDaoImpl ourInstance = new ProposalDaoImpl();
 
-    public static ProposalMethodsImpl getInstance() {
+    public static ProposalDaoImpl getInstance() {
         return ourInstance;
     }
 
-    private ProposalMethodsImpl() {
+    private ProposalDaoImpl() {
     }
 
     public Proposal selectById(int id) {

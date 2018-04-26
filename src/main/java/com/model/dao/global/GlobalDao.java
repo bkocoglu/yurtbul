@@ -2,7 +2,7 @@ package com.model.dao.global;
 
 import java.util.List;
 
-public interface GlobalMethods {
+public interface GlobalDao {
     public boolean save(Object entity);
 
     public boolean delete(Object entity);

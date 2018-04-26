@@ -4,4 +4,6 @@ import com.model.entities.User;
 
 public interface NewUserService {
     public boolean createNewUser(User user);
+
+    public boolean chackSystemName(String systemName);
 }

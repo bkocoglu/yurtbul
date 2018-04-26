@@ -16,7 +16,6 @@ public class NewUser extends ActionSupport implements SessionAware {
     @Override
     public String execute() throws Exception {
         NewUserServiceImpl newUserService = new NewUserServiceImpl();
-
         if (getNewEmail().equals("") || getNewLastName().equals("") || getNewName().equals("")
                 || getNewPass().equals("") || getNewPassAgain().equals("") ){
             sessionMap.put("resultState", "Başarsız");
@@ -39,18 +38,27 @@ public class NewUser extends ActionSupport implements SessionAware {
             return ERROR;
         }
 
-        User user = new User(getNewName(), getNewLastName(), getNewEmail(), getNewPass());
+        if (newUserService.chackSystemName(getNewEmail())){
+            User user = new User(getNewName(), getNewLastName(), getNewEmail(), getNewPass());
 
-        boolean res = newUserService.createNewUser(user);
+            boolean res = newUserService.createNewUser(user);
 
-        if (res) {
-            sessionMap.put("resultState", "Başarılı");
-            sessionMap.put("resultMessage", "Kayıt Başarıyla Oluşturuldu.");
-            return SUCCESS;
-        } else {
-            sessionMap.put("resultMessage", "İşlem Başarısız");
+            if (res) {
+                sessionMap.put("resultState", "Başarılı");
+                sessionMap.put("resultMessage", "Kayıt Başarıyla Oluşturuldu.");
+                return SUCCESS;
+            } else {
+                sessionMap.put("resultState", "Başarısız");
+                sessionMap.put("resultMessage", "İşlem Başarısız");
+                return ERROR;
+            }
+        }else {
+            sessionMap.put("resultState", "Başarısız");
+            sessionMap.put("resultMessage","Bu kullanıcı adı kullanılmaktadır.");
             return ERROR;
         }
+
+
     }
 
     public SessionMap<String, Object> getSessionMap() {

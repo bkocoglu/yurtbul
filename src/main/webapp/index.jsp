@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.Iterator" %>
+<%@ page import="com.model.entities.City" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: pC2
   Date: 22.03.2018
@@ -73,8 +75,8 @@
 
 <%
         session.setAttribute("resultState",null);
+        session.setAttribute("resultMessage", null);
     }
-
 %>
 
 
@@ -95,8 +97,14 @@
                                 <div class="form-group">
                                     <label for="inputState2" style="font-weight: bold;">Şehir</label>
                                     <select id="inputState2" class="form-control" style="width: 100%; margin-top: 5px;">
-                                        <option selected>Isparta</option>
-                                        <option>Afyonkarahisar</option>
+                                        <%
+                                            List<City> cityList = (List<City>) application.getAttribute("allCity");
+                                            for (City city:cityList) {
+                                        %>
+                                        <option><%=city.getCityName()%></option>
+                                        <%
+                                            }
+                                        %>
                                     </select>
                                     <label for="inputState4" style="font-weight: bold; margin-top: 5px;">İlçe</label>
                                     <select id="inputState4" class="form-control" style="width: 100%; margin-top: 5px;">
@@ -415,12 +423,14 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg" style="background-color: #F5F5F5; border-radius: 10px;">
                         <div id="uyeGirisKutusu">
-                            <form class="was-validated">
+                            <form class="was-validated" action="login" method="post">
                                 <div class="form-group">
-                                    <input name="loginName" id="userName" type="text" class="form-control is-invalid loginInputs" placeholder="Kullanıcı Adı veya e-Mail adresi" maxlength="50" required>
-                                    <input name="loginPassword" id="password" type="password" class="form-control is-invalid loginInputs" rows="4" maxlength="20" placeholder="Şifre" required></input>
+                                    <s:textfield name="loginName" id="userName" cssClass="form-control is-invalid loginInputs"
+                                           placeholder="Kullanıcı Adı veya e-Mail adresi" maxlength="50"/>
+                                    <s:password name="loginPassword" id="password" cssClass="form-control is-invalid loginInputs"
+                                           rows="4" maxlength="20" placeholder="Şifre"/>
                                     <p style="width: 100%; font-weight: bold; font-size: x-small;">İlan verebilmek için için giriş yapmalısınız.</p>
-                                    <button id="loginButton" type="submit" style="cursor: pointer; float: right; margin-bottom: 10px; margin-top: 20px;" class="btn btn-outline-primary">Giriş Yap</button>
+                                    <s:submit id="loginButton" cssStyle="cursor: pointer; float: right; margin-bottom: 10px; margin-top: 20px;" cssClass="btn btn-outline-primary" value="Giriş Yap"/>
                                 </div>
                             </form>
                             <!-- Button to open the modal -->
@@ -444,9 +454,9 @@
 
                                     <s:textfield id="newUsername" cssClass="newUserTexts" name="newEmail" maxLength="60" required="true" label="Email veya Kullanıcı Adı" placeholder="eMail veya Kullanıcı Adı" labelposition="top"/>
 
-                                    <s:textfield id="newPassword" cssClass="newUserTexts" name="newPass" maxLength="20" required="true" label="Şifre" placeholder="Şifre" labelposition="top"/>
+                                    <s:password id="newPassword" cssClass="newUserTexts" name="newPass" maxLength="20" required="true" label="Şifre" placeholder="Şifre" labelposition="top"/>
 
-                                    <s:textfield id="newPasswordAgain" cssClass="newUserTexts" name="newPassAgain" maxLength="20" required="true" label="Şifre Tekrar" placeholder="Şifre Tekrar" labelposition="top"/>
+                                    <s:password id="newPasswordAgain" cssClass="newUserTexts" name="newPassAgain" maxLength="20" required="true" label="Şifre Tekrar" placeholder="Şifre Tekrar" labelposition="top"/>
 
                                     <s:submit id="newUserButton" cssClass="btn btn-success" value="Kayıt Ol"/>
                                 </div>
