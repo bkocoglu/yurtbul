@@ -7,61 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="261354c5-dc1c-4d14-8e9b-624ac3119886" name="Default" comment="26.03.2018 02:45">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Login.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NewAdvert.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/filters/CharacterEncodingFilter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/city/CityDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/city/impl/CityDaoImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/user/UserDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/user/impl/UserDaoİmpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/model/entities/City.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/test/AdvertTypeVeriable.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/test/CityTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/YMYurtbul_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/YMYurtbul_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/YMYurtbul.iml" afterPath="$PROJECT_DIR$/YMYurtbul.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HomePageLoad.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HomePageLoad.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NewUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NewUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/dao/global/GlobalMethods.java" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/global/GlobalDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/dao/global/impl/GlobalMethodsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/global/impl/GlobalDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/dao/proposal/ProposalMethods.java" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/proposal/ProposalDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/dao/proposal/impl/ProposalMethodsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/model/dao/proposal/impl/ProposalDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/proposal/impl/ProposalServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/services/proposal/impl/ProposalServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/user/NewUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/services/user/NewUserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/src/main/resources/struts.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul.war" afterPath="$PROJECT_DIR$/target/YMYurtbul.war" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/controller/HomePageLoad.class" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/controller/HomePageLoad.class" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/controller/NewUser.class" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/controller/NewUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/model/dao/global/GlobalMethods.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/model/dao/global/impl/GlobalMethodsImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/model/dao/proposal/ProposalMethods.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/model/dao/proposal/impl/ProposalMethodsImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/services/proposal/impl/ProposalServiceImpl.class" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/services/proposal/impl/ProposalServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/services/user/NewUserService.class" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/services/user/NewUserService.class" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/services/user/impl/NewUserServiceImpl.class" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/com/services/user/impl/NewUserServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/hibernate.cfg.xml" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/classes/struts.xml" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/YMYurtbul/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/YMYurtbul/index.jsp" afterPath="$PROJECT_DIR$/target/YMYurtbul/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HomePageLoad.class" afterPath="$PROJECT_DIR$/target/classes/com/controller/HomePageLoad.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/NewUser.class" afterPath="$PROJECT_DIR$/target/classes/com/controller/NewUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/dao/global/GlobalMethods.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/dao/global/impl/GlobalMethodsImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/dao/proposal/ProposalMethods.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/dao/proposal/impl/ProposalMethodsImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/services/proposal/impl/ProposalServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/services/proposal/impl/ProposalServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/services/user/NewUserService.class" afterPath="$PROJECT_DIR$/target/classes/com/services/user/NewUserService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/services/user/impl/NewUserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/services/user/impl/NewUserServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/struts.xml" afterPath="$PROJECT_DIR$/target/classes/struts.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,7 +58,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="1264">
               <caret line="79" column="2" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="79" selection-end-column="2" />
               <folding />
             </state>
@@ -122,119 +68,39 @@
       <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="832">
               <caret line="52" column="2" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#6;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#7;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#7;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#8;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#9;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#9;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#div#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#18974#18980#0#HTML" expanded="true" />
-                <element signature="e#19209#19216#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewAdvert.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewAdvert.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NewAdvert.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="480">
               <caret line="30" column="95" lean-forward="false" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1955#1956#0" expanded="true" />
-                <element signature="e#1999#2000#0" expanded="true" />
-                <element signature="e#2056#2057#0" expanded="true" />
-                <element signature="e#2089#2090#0" expanded="true" />
-                <element signature="e#2161#2162#0" expanded="true" />
-                <element signature="e#2205#2206#0" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-                <element signature="e#2263#2264#0" expanded="true" />
-                <element signature="e#2522#2523#0" expanded="true" />
-                <element signature="e#2549#2550#0" expanded="true" />
-                <element signature="e#2589#2590#0" expanded="true" />
-                <element signature="e#2621#2622#0" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
-                <element signature="e#2679#2680#0" expanded="true" />
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2751#2752#0" expanded="true" />
-                <element signature="e#2786#2787#0" expanded="true" />
-                <element signature="e#2817#2818#0" expanded="true" />
-                <element signature="e#3099#3100#0" expanded="true" />
-                <element signature="e#3134#3135#0" expanded="true" />
-                <element signature="e#3433#3434#0" expanded="true" />
-                <element signature="e#3469#3470#0" expanded="true" />
-                <element signature="e#3777#3778#0" expanded="true" />
-                <element signature="e#3818#3819#0" expanded="true" />
-                <element signature="e#3886#3887#0" expanded="true" />
-                <element signature="e#3946#3947#0" expanded="true" />
-                <element signature="e#3992#3993#0" expanded="true" />
-                <element signature="e#4034#4035#0" expanded="true" />
-                <element signature="e#4104#4105#0" expanded="true" />
-                <element signature="e#4166#4167#0" expanded="true" />
-                <element signature="e#4204#4205#0" expanded="true" />
-                <element signature="e#4238#4239#0" expanded="true" />
-                <element signature="e#4525#4526#0" expanded="true" />
-                <element signature="e#4553#4554#0" expanded="true" />
-                <element signature="e#4595#4596#0" expanded="true" />
-                <element signature="e#4629#4630#0" expanded="true" />
-                <element signature="e#4665#4666#0" expanded="true" />
-                <element signature="e#4697#4698#0" expanded="true" />
-                <element signature="e#4747#4748#0" expanded="true" />
-                <element signature="e#4789#4790#0" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/model/entities/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewUserServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -242,7 +108,7 @@
       <file leaf-file-name="NewUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NewUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="240">
               <caret line="21" column="83" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="21" selection-end-column="83" />
               <folding />
             </state>
@@ -262,7 +128,7 @@
       <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="368">
               <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="34" />
               <folding />
             </state>
@@ -272,7 +138,7 @@
       <file leaf-file-name="UserDaoİmpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/model/dao/user/impl/UserDaoİmpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
+            <state relative-caret-position="400">
               <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding />
             </state>
@@ -348,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/model/dao/city/impl/CityDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/CityTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/model/dao/user/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/model/dao/user/impl/UserDaoİmpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/services/user/impl/LoginServiceImpl.java" />
@@ -361,6 +226,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/NewAdvert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -424,9 +290,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -465,6 +331,55 @@
               <item name="YMYurtbul" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YMYurtbul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YMYurtbul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YMYurtbul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YMYurtbul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YMYurtbul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YMYurtbul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YMYurtbul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YMYurtbul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YMYurtbul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YMYurtbul" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -486,7 +401,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -500,16 +415,16 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\images" />
-      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\css" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\jquery" />
+      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\bootstrap" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.test" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\jquery" />
-      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\bootstrap" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\images" />
+      <recent name="C:\Users\pC2\IdeaProjects\YMYurtbul\src\main\webapp\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -803,14 +718,16 @@
       <workItem from="1524603532316" duration="6875000" />
       <workItem from="1524652264681" duration="340000" />
       <workItem from="1524748033861" duration="21309000" />
+      <workItem from="1524826787930" duration="1015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109160000" />
+    <option name="totallyTimeSpent" value="110175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -831,10 +748,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28517398" sideWeight="0.723301" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28971255" sideWeight="0.723301" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28517398" sideWeight="0.27669904" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1056,14 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#675#676#0" expanded="false" />
-            <element signature="e#711#712#0" expanded="false" />
-            <element signature="e#746#747#0" expanded="false" />
-            <element signature="e#777#778#0" expanded="false" />
-            <element signature="e#825#826#0" expanded="false" />
-            <element signature="e#865#866#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,45 +1021,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/impl/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/impl/LoginServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/LoginService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/model/dao/user/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/model/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,13 +1034,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/model/dao/user/impl/UserDaoİmpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
+        <state relative-caret-position="400">
           <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding />
         </state>
@@ -1181,7 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="368">
           <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="34" />
           <folding />
         </state>
@@ -1191,9 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1231,7 +1102,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="1264">
           <caret line="79" column="2" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="79" selection-end-column="2" />
           <folding />
         </state>
@@ -1239,7 +1110,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NewUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="240">
           <caret line="21" column="83" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="21" selection-end-column="83" />
           <folding />
         </state>
@@ -1247,117 +1118,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="832">
           <caret line="52" column="2" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#6;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#7;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#7;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#8;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#9;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#9;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#div#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#a#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#18974#18980#0#HTML" expanded="true" />
-            <element signature="e#19209#19216#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/NewAdvert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="480">
           <caret line="30" column="95" lean-forward="false" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#1999#2000#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-            <element signature="e#2205#2206#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-            <element signature="e#2549#2550#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-            <element signature="e#2621#2622#0" expanded="true" />
-            <element signature="e#2652#2653#0" expanded="true" />
-            <element signature="e#2679#2680#0" expanded="true" />
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#2751#2752#0" expanded="true" />
-            <element signature="e#2786#2787#0" expanded="true" />
-            <element signature="e#2817#2818#0" expanded="true" />
-            <element signature="e#3099#3100#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3433#3434#0" expanded="true" />
-            <element signature="e#3469#3470#0" expanded="true" />
-            <element signature="e#3777#3778#0" expanded="true" />
-            <element signature="e#3818#3819#0" expanded="true" />
-            <element signature="e#3886#3887#0" expanded="true" />
-            <element signature="e#3946#3947#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-            <element signature="e#4034#4035#0" expanded="true" />
-            <element signature="e#4104#4105#0" expanded="true" />
-            <element signature="e#4166#4167#0" expanded="true" />
-            <element signature="e#4204#4205#0" expanded="true" />
-            <element signature="e#4238#4239#0" expanded="true" />
-            <element signature="e#4525#4526#0" expanded="true" />
-            <element signature="e#4553#4554#0" expanded="true" />
-            <element signature="e#4595#4596#0" expanded="true" />
-            <element signature="e#4629#4630#0" expanded="true" />
-            <element signature="e#4665#4666#0" expanded="true" />
-            <element signature="e#4697#4698#0" expanded="true" />
-            <element signature="e#4747#4748#0" expanded="true" />
-            <element signature="e#4789#4790#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/model/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/services/user/impl/NewUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
