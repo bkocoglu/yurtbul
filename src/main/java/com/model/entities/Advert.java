@@ -10,49 +10,64 @@ public class Advert {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column
     private String name;
 
-    @Column
-    private int price;
-
-    @Column
-    private String explanation;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private AdvertType advertType;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private AdvertType typeId;
+    private City city;
 
-    @Override
-    public String toString() {
-        return "Advert{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", explanation='" + explanation + '\'' +
-                ", typeId=" + typeId +
-                '}';
-    }
+    private String district;        //ilçe
+
+    private String neighborhood;    //mahalle
+
+    private String addressDetail;
+
+    private double coordinateLatitude;      //enlem
+
+    private double coordinateLongitude;     //boylam
+
+    private String explanation;
+
+    private int price;
+
+    private String telephone;
+
+    private float star;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private User user;
 
     public Advert() {
     }
 
-    public Advert(String name, int price, String explanation) {
-
+    public Advert(String name, AdvertType advertType, City city, String district, String neighborhood, String addressDetail,
+                  double coordinateLatitude, double coordinateLongitude, String explanation, int price, String telephone, float star, User user) {
         this.name = name;
-        this.price = price;
+        this.advertType = advertType;
+        this.city = city;
+        this.district = district;
+        this.neighborhood = neighborhood;
+        this.addressDetail = addressDetail;
+        this.coordinateLatitude = coordinateLatitude;
+        this.coordinateLongitude = coordinateLongitude;
         this.explanation = explanation;
+        this.price = price;
+        this.telephone = telephone;
+        this.star = star;
+        this.user = user;
     }
 
-    public Advert(String name, int price, String explanation, AdvertType typeId) {
+    public float getStar() {
+        return star;
+    }
 
-        this.name = name;
-        this.price = price;
-        this.explanation = explanation;
-        this.typeId = typeId;
+    public void setStar(float star) {
+        this.star = star;
     }
 
     public int getId() {
-
         return id;
     }
 
@@ -68,12 +83,60 @@ public class Advert {
         this.name = name;
     }
 
-    public int getPrice() {
-        return price;
+    public AdvertType getAdvertType() {
+        return advertType;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setAdvertType(AdvertType advertType) {
+        this.advertType = advertType;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getNeighborhood() {
+        return neighborhood;
+    }
+
+    public void setNeighborhood(String neighborhood) {
+        this.neighborhood = neighborhood;
+    }
+
+    public String getAddressDetail() {
+        return addressDetail;
+    }
+
+    public void setAddressDetail(String addressDetail) {
+        this.addressDetail = addressDetail;
+    }
+
+    public double getCoordinateLatitude() {
+        return coordinateLatitude;
+    }
+
+    public void setCoordinateLatitude(double coordinateLatitude) {
+        this.coordinateLatitude = coordinateLatitude;
+    }
+
+    public double getCoordinateLongitude() {
+        return coordinateLongitude;
+    }
+
+    public void setCoordinateLongitude(double coordinateLongitude) {
+        this.coordinateLongitude = coordinateLongitude;
     }
 
     public String getExplanation() {
@@ -84,11 +147,19 @@ public class Advert {
         this.explanation = explanation;
     }
 
-    public AdvertType getTypeId() {
-        return typeId;
+    public int getPrice() {
+        return price;
     }
 
-    public void setTypeId(AdvertType typeId) {
-        this.typeId = typeId;
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }

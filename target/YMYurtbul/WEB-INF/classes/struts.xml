@@ -22,8 +22,20 @@
         </action>
 
         <action name="createAdvert" class="com.controller.NewAdvert" method="execute">
+            <interceptor-ref name="fileUpload">
+                <param name="maximumSize">102097152</param>
+                <param name="allowedTypes">
+                    image/png,image/jpeg,image/pjpeg
+                </param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
             <result name="success">/admin.jsp</result>
             <result name="error">/admin.jsp</result>
+            <result name="input">/admin.jsp</result>
+        </action>
+
+        <action name="image" class="com.controller.ShowImage">
+            <result name="success">/admin.jsp</result>
         </action>
     </package>
 

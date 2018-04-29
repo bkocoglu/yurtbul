@@ -8,14 +8,13 @@ public class City {
     @Id
     private int cityId;
 
+    @Column
+    private String cityName;
+
     public City(int cityId, String cityName) {
         this.cityId = cityId;
         this.cityName = cityName;
     }
-
-    @Column
-
-    private String cityName;
 
     @Override
     public String toString() {

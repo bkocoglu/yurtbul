@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.model.dao.user.impl.UserDabImpl;
+import com.model.dao.user.impl.userDaoImpl;
 import com.model.entities.User;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.dispatcher.SessionMap;
@@ -20,13 +20,15 @@ public class Login extends ActionSupport implements SessionAware{
             sessionMap.put("resultMessage", "Kullanıcı adı ve şifreyi boş bırakamazsınız !");
             return ERROR;
         }
-        UserDabImpl userDabImpl = new UserDabImpl();
-        User user = userDabImpl.logCheck(getLoginName(),getLoginPassword());
+        userDaoImpl userDaoImpl = new userDaoImpl();
+        User user = userDaoImpl.logCheck(getLoginName(),getLoginPassword());
         if(user==null){
             sessionMap.put("resultState", "Başarısız");
             sessionMap.put("resultMessage", "Kullanıcı adı ve şifre hatalı !");
             return ERROR;
         }else {
+            sessionMap.put("resultState", "Başarılı");
+            sessionMap.put("resultMessage", "Tebrikler başarılı bir şekilde giriş yaptınız !");
             sessionMap.put("user",user);
             return SUCCESS;
         }

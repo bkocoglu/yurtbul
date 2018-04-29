@@ -1,11 +1,20 @@
 package com.controller;
 
+import com.model.dao.advertType.impl.TypeDaoImpl;
+import com.model.dao.city.impl.CityDaoImpl;
+import com.model.dao.global.impl.GlobalDaoImpl;
+import com.model.entities.*;
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 import java.util.Map;
 
 public class NewAdvert extends ActionSupport implements SessionAware {
@@ -13,13 +22,11 @@ public class NewAdvert extends ActionSupport implements SessionAware {
 
     private String name,type,city,district,neighborhood,addressDetail,coordinateLatitude,coordinateLongitude,explanation;
     private String price,telephone;
-    //private File mainPhoto,photo1,photo2,photo3,photo4,photo5,photo6,photo7;
+    private String mainPhotoName;
+    private File mainPhoto,photo1,photo2,photo3,photo4;
 
     @Override
     public String execute() throws Exception {
-        System.out.println(getName()+" "+getType()+" "+getCity()+" "+getDistrict()+" "+getNeighborhood()+" " +
-                ""+getAddressDetail()+" "+getCoordinateLatitude()+" "+getCoordinateLongitude()+" "+getExplanation()+"" +
-                " "+getPrice()+" "+getTelephone());
         if (getName().equals("") || getType().equals("") || getCity().equals("") || getNeighborhood().equals("") ||
                 getAddressDetail().equals("") || getCoordinateLongitude().equals("") || getCoordinateLatitude().equals("") ||
                 getExplanation().equals("") || getPrice().equals("") || getTelephone().equals("")){
@@ -34,6 +41,102 @@ public class NewAdvert extends ActionSupport implements SessionAware {
             sessionMap.put("resultMessage", "Girdiğiniz telefon numarası hatalı !");
             return ERROR;
         }
+        if (mainPhoto==null){
+            sessionMap.put("resultState", "Başarsız");
+            sessionMap.put("resultMessage", "Vitrin Fotoğrafı Eklemeniz Gerekir !");
+            return ERROR;
+        }
+        for (int i=0;i<coordinateLatitude.length();i++){
+            if (coordinateLatitude.charAt(i) == 'e' ){
+                sessionMap.put("resultState", "Başarsız");
+                sessionMap.put("resultMessage", "Enlem değerini doğru girdiğinizden emin olunuz.");
+                return ERROR;
+            }
+        }
+        for (int i=0;i<coordinateLongitude.length();i++){
+            if (coordinateLongitude.charAt(i) == 'e' ){
+                sessionMap.put("resultState", "Başarsız");
+                sessionMap.put("resultMessage", "Boylam değerini doğru girdiğinizden emin olunuz.");
+                return ERROR;
+            }
+        }
+        for (int i=0;i<price.length();i++){
+            if (price.charAt(i) == 'e' ){
+                sessionMap.put("resultState", "Başarsız");
+                sessionMap.put("resultMessage", "Fiyat değerini doğru girdiğinizden emin olunuz.");
+                return ERROR;
+            }
+        }
+        GlobalDaoImpl globalDao = new GlobalDaoImpl();
+        TypeDaoImpl typeDao = new TypeDaoImpl();
+        CityDaoImpl cityDao = new CityDaoImpl();
+
+        User user = (User) ServletActionContext.getRequest().getSession().getAttribute("user");
+
+
+        try {
+            System.out.println(getName()+" "+getType()+" "+getCity()+" "+getDistrict()+" "+getNeighborhood()+" " +
+                    ""+getAddressDetail()+" "+getCoordinateLatitude()+" "+getCoordinateLongitude()+" "+getExplanation()+"" +
+                    " "+getPrice()+" "+getTelephone());
+            AdvertType advertType =  typeDao.findByName(type);
+            System.out.println(advertType);
+            City cityClass = cityDao.findByName(city);
+            System.out.println(cityClass);
+            if (advertType==null || cityClass==null ){
+                sessionMap.put("resultState", "Başarsız");
+                sessionMap.put("resultMessage", "Geçersiz bir parametre gönderildi");
+                return ERROR;
+            }
+            double coordinateLatitudeDouble = Double.parseDouble(coordinateLatitude);
+            double coordinateLongitudeDouble = Double.parseDouble(coordinateLongitude);
+            int priceInt = Integer.parseInt(price);
+            float defaultStar = 1;
+
+
+            System.out.println(user.toString());
+            Advert advert = new Advert(name, advertType, cityClass, district, neighborhood, addressDetail, coordinateLatitudeDouble,
+                    coordinateLongitudeDouble, explanation, priceInt, telephone, defaultStar, user);
+
+            globalDao.save(advert);
+
+            byte[] imageInByte = new byte[(int)mainPhoto.length()];
+            FileInputStream fileInputStream = new FileInputStream(mainPhoto);
+            fileInputStream.read(imageInByte);
+            fileInputStream.close();
+
+            Images images = new Images();
+            images.setName("mainPhoto");
+            images.setImage(imageInByte);
+            images.setAdvert(advert);
+
+            globalDao.save(images);
+
+            File[] fileList = {photo1,photo2,photo3,photo4};
+
+            for (int i = 0; i<fileList.length ; i++) {
+                File photo = fileList[i];
+                if (photo!=null){
+                    byte[] imageByte = new byte[(int)photo.length()];
+                    FileInputStream fileInputStream1 = new FileInputStream(photo);
+                    fileInputStream1.read(imageByte);
+                    fileInputStream1.close();
+
+                    Images images1 = new Images();
+                    images1.setName("photo"+i);
+                    images1.setImage(imageByte);
+                    images1.setAdvert(advert);
+
+                    globalDao.save(images1);
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            sessionMap.put("resultState", "Başarsız");
+            sessionMap.put("resultMessage", "İşleminiz geçici olarak gerçekleştirilemiyor. Lütfen daha sonra tekrar deneyin.");
+            return ERROR;
+        }
+        sessionMap.put("resultState", "Başarılı");
+        sessionMap.put("resultMessage", "Tebrikler. İlanınız başarılı bir şekilde yayınlandı !");
         return SUCCESS;
     }
 
@@ -156,5 +259,53 @@ public class NewAdvert extends ActionSupport implements SessionAware {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public File getMainPhoto() {
+        return mainPhoto;
+    }
+
+    public void setMainPhoto(File mainPhoto) {
+        this.mainPhoto = mainPhoto;
+    }
+
+    public File getPhoto1() {
+        return photo1;
+    }
+
+    public void setPhoto1(File photo1) {
+        this.photo1 = photo1;
+    }
+
+    public File getPhoto2() {
+        return photo2;
+    }
+
+    public void setPhoto2(File photo2) {
+        this.photo2 = photo2;
+    }
+
+    public File getPhoto3() {
+        return photo3;
+    }
+
+    public void setPhoto3(File photo3) {
+        this.photo3 = photo3;
+    }
+
+    public File getPhoto4() {
+        return photo4;
+    }
+
+    public void setPhoto4(File photo4) {
+        this.photo4 = photo4;
+    }
+
+    public String getMainPhotoName() {
+        return mainPhotoName;
+    }
+
+    public void setMainPhotoName(String mainPhotoName) {
+        this.mainPhotoName = mainPhotoName;
     }
 }

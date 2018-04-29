@@ -11,7 +11,7 @@ import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class UserDabImpl implements UserDao {
+public class userDaoImpl implements UserDao {
 
     public boolean findBySystemName(String systemName) {
         Session session = openSession();

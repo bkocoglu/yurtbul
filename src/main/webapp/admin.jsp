@@ -2,7 +2,8 @@
 <%@ page import="com.model.entities.User" %>
 <%@ page import="com.model.entities.City" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.controller.ShowImage" %><%--
   Created by IntelliJ IDEA.
   User: pC2
   Date: 26.04.2018
@@ -81,8 +82,7 @@
                     Mekan Ekle
                 </div>
                 <div class="card-body">
-                    <form action="createAdvert" enctype="multipart/form-data" accept-charset="utf-8">
-
+                    <s:form action="createAdvert" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="inputsLabel">İşletme Adı</label>
@@ -91,8 +91,8 @@
                             <div class="col-md-6 mb-3">
                                 <label class="inputsLabel">Tür</label>
                                 <select name="type" class="form-control inputsItem">
-                                    <option selected>Yurt</option>
-                                    <option>Apart</option>
+                                    <option>yurt</option>
+                                    <option>apart</option>
                                 </select>
                             </div>
                         </div>
@@ -155,13 +155,20 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col">
+                                <div class="alert alert-primary" style="text-align: center;" role="alert">
+                                    <b>Lütfen fotoğraflarınızı jpg ve png uzantılı olarak seçiniz. Aksi takdirde ilanınız yayınlanmayacaktır.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="inputsLabel">Vitrin Fotoğrafı</label>
-                                <input name="mainPhoto" type="file" class="form-control-file inputsItem" accept="image/*" style="margin-bottom: 0px;">
+                                <input name="mainPhoto" type="file" class="form-control-file inputsItem" style="margin-bottom: 0px;"/>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="inputsLabel">Fotoğraf</label>
-                                <input name="photo1" type="file" class="form-control-file inputsItem" accept="image/*" style="margin-bottom: 0px;">
+                                <input name="photo1" type="file" class="form-control-file inputsItem" style="margin-bottom: 0px;"/>
                             </div>
                         </div>
                         <div class="row">
@@ -179,23 +186,16 @@
                                 <label class="inputsLabel">Fotoğraf</label>
                                 <input name="photo4" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="inputsLabel">Fotoğraf</label>
-                                <input name="photo5" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
-                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="inputsLabel">Fotoğraf</label>
-                                <input name="photo6" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="inputsLabel">Fotoğraf</label>
-                                <input name="photo7" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
+                            <div class="col">
+                                <div class="alert alert-primary" style="text-align: center;" role="alert">
+                                    <b>Bu işlem 2-5 dakika sürebilir. Lütfen Bekleyin.</b>
+                                </div>
                             </div>
                         </div>
                         <s:submit id="mekanEkleButton" cssClass="btn btn-success" value="Ekle"/>
-                    </form>
+                    </s:form>
                 </div>
             </div>
 

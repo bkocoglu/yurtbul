@@ -6,6 +6,7 @@ import com.services.user.impl.NewUserServiceImpl;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 public class NewUser extends ActionSupport implements SessionAware {
@@ -79,7 +80,11 @@ public class NewUser extends ActionSupport implements SessionAware {
     }
 
     public void setNewName(String newName) {
-        this.newName = newName;
+        try {
+            this.newName = new String(newName.getBytes("ISO-8859-1"),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNewLastName() {
@@ -87,7 +92,11 @@ public class NewUser extends ActionSupport implements SessionAware {
     }
 
     public void setNewLastName(String newLastName) {
-        this.newLastName = newLastName;
+        try {
+            this.newLastName = new String(newLastName.getBytes("ISO-8859-1"),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNewEmail() {
@@ -95,7 +104,11 @@ public class NewUser extends ActionSupport implements SessionAware {
     }
 
     public void setNewEmail(String newEmail) {
-        this.newEmail = newEmail;
+        try {
+            this.newEmail = new String(newEmail.getBytes("ISO-8859-1"),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNewPass() {
@@ -103,7 +116,11 @@ public class NewUser extends ActionSupport implements SessionAware {
     }
 
     public void setNewPass(String newPass) {
-        this.newPass = newPass;
+        try {
+            this.newPass = new String(newPass.getBytes("ISO-8859-1"),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNewPassAgain() {
@@ -111,8 +128,10 @@ public class NewUser extends ActionSupport implements SessionAware {
     }
 
     public void setNewPassAgain(String newPassAgain) {
-        this.newPassAgain = newPassAgain;
+        try {
+            this.newPassAgain = new String(newPassAgain.getBytes("ISO-8859-1"),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
-
-
 }

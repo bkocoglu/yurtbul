@@ -21,6 +21,23 @@ public class CityDaoImpl implements CityDao {
             session.close();
         }
     }
+
+    public City findByName(String name) {
+        Session session = openSession();
+        try{
+            List<City> cityList = session.createCriteria(City.class).add(Restrictions.eq("cityName", name)).list();
+            if (cityList.isEmpty())
+                return null;
+            else
+                return cityList.get(0);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }finally {
+            session.close();
+        }
+    }
+
     private Session openSession(){
         try {
             return HibernateUtil.getSessionFactory().openSession();

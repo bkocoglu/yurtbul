@@ -21,7 +21,7 @@ public class ManyToOneTest {
         HibernateExample.save(advert2);
         HibernateExample.save(advert3);
         */
-       Session session = HibernateUtil.getSessionFactory().openSession();
+       /*Session session = HibernateUtil.getSessionFactory().openSession();
        Query query = session.getNamedQuery("getTypeByName");
        query.setParameter("typeName", "apart");
        AdvertType advertType = (AdvertType) query.getSingleResult();
@@ -29,6 +29,6 @@ public class ManyToOneTest {
        Advert advert4 = new Advert("Ada apart", 1050, "gir ve gör2", advertType);
 
         HibernateExample.save(advert4);
-
+*/
     }
 }
