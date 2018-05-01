@@ -1,5 +1,7 @@
 package com.model.entities;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +13,7 @@ public class Images {
 
     private String name;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     private Advert advert;
 
     @Lob

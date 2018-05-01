@@ -37,6 +37,20 @@
         <action name="image" class="com.controller.ShowImage">
             <result name="success">/admin.jsp</result>
         </action>
+
+        <action name="logout" class="com.controller.Logout">
+            <result name="success">/index.jsp</result>
+            <result name="error">/admin.jsp</result>
+        </action>
+
+        <action name="deleteAdvert" class="com.controller.DeleteAdvert">
+            <result name="success">/admin.jsp</result>
+            <result name="error">/admin.jsp</result>
+        </action>
+
+        <action name="advertFilter" class="com.controller.AdvertFilter">
+            <result name="success">/index.jsp</result>
+        </action>
     </package>
 
 </struts>

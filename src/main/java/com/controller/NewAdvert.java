@@ -8,6 +8,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
+import org.apache.struts2.util.ServletContextAware;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +18,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
-public class NewAdvert extends ActionSupport implements SessionAware {
+public class NewAdvert extends ActionSupport implements SessionAware, ServletContextAware {
+    ServletContext context;
     private SessionMap<String, Object> sessionMap;
 
     private String name,type,city,district,neighborhood,addressDetail,coordinateLatitude,coordinateLongitude,explanation;
@@ -129,12 +131,26 @@ public class NewAdvert extends ActionSupport implements SessionAware {
                     globalDao.save(images1);
                 }
             }
+
+            List<Advert> advertList = (List<Advert>) context.getAttribute("advertList");
+
+            advertList.add(advert);
+
+            context.setAttribute("advertList",advertList);
+
+            List<Advert> showcaseList = (List<Advert>) context.getAttribute("showCaseList");
+
+            showcaseList.add(advert);
+
+            context.setAttribute("showCaseList",showcaseList);
+
         }catch (Exception e){
             e.printStackTrace();
             sessionMap.put("resultState", "Başarsız");
             sessionMap.put("resultMessage", "İşleminiz geçici olarak gerçekleştirilemiyor. Lütfen daha sonra tekrar deneyin.");
             return ERROR;
         }
+
         sessionMap.put("resultState", "Başarılı");
         sessionMap.put("resultMessage", "Tebrikler. İlanınız başarılı bir şekilde yayınlandı !");
         return SUCCESS;
@@ -307,5 +323,9 @@ public class NewAdvert extends ActionSupport implements SessionAware {
 
     public void setMainPhotoName(String mainPhotoName) {
         this.mainPhotoName = mainPhotoName;
+    }
+
+    public void setServletContext(ServletContext context) {
+        this.context = context;
     }
 }

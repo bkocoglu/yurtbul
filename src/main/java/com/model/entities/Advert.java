@@ -12,10 +12,10 @@ public class Advert {
 
     private String name;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     private AdvertType advertType;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     private City city;
 
     private String district;        //ilçe
@@ -36,7 +36,7 @@ public class Advert {
 
     private float star;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     private User user;
 
     public Advert() {

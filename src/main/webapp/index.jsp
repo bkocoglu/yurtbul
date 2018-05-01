@@ -1,6 +1,7 @@
 <%@ page import="java.util.Iterator" %>
 <%@ page import="com.model.entities.City" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.model.entities.Advert" %><%--
   Created by IntelliJ IDEA.
   User: pC2
   Date: 22.03.2018
@@ -92,25 +93,19 @@
                 <div class="row">
                     <div class="col-1"></div>
                     <div class="col">
-                        <form>
+                        <form action="advertFilter">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="inputState2" style="font-weight: bold;">Şehir</label>
-                                    <select id="inputState2" class="form-control" style="width: 100%; margin-top: 5px;">
+                                    <select name="cityName" id="inputState2" class="form-control" style="width: 100%; margin-top: 5px;">
                                         <%
                                             List<City> cityList = (List<City>) application.getAttribute("allCity");
                                             for (City city:cityList) {
                                         %>
-                                        <option><%=city.getCityName()%></option>
+                                        <option value="<%=city.getCityId()%>"><%=city.getCityName()%></option>
                                         <%
                                             }
                                         %>
-                                    </select>
-                                    <label for="inputState4" style="font-weight: bold; margin-top: 5px;">İlçe</label>
-                                    <select id="inputState4" class="form-control" style="width: 100%; margin-top: 5px;">
-                                        <option selected>Merkez</option>
-                                        <option>Çünür</option>
-                                        <option>Senirkent</option>
                                     </select>
                                     <label for="inputState" style="font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Tür</label>
                                     <fieldset class="form-group">
@@ -118,7 +113,7 @@
                                             <div class="col">
                                                 <div class="form-check" >
                                                     <label class="form-check-label" style="cursor: pointer;">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="yurt">
                                                         <span>Yurt</span>
                                                     </label>
                                                 </div>
@@ -126,7 +121,7 @@
                                             <div class="col">
                                                 <div class="form-check" >
                                                     <label class="form-check-label" style="cursor: pointer;">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="apart">
                                                         Apart
                                                     </label>
                                                 </div>
@@ -134,39 +129,20 @@
                                             <div class="col">
                                                 <div class="form-check" style="margin-left: 50px; margin-top: 10px;">
                                                     <label class="form-check-label" style="cursor: pointer;">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2" checked>
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="hepsi" checked>
                                                         Hepsi
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </fieldset>
-                                    <label for="inputState" style="font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Konum</label>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                            Merkeze Yakın
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                            Okula Yakın
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
-                                            Hepsi
-                                        </label>
-                                    </div>
                                     <label for="inputState3" style="font-weight: bold;">Fiyat</label>
                                     <select id="inputState3" class="form-control" style="width: 100%; margin-top: 5px;">
-                                        <option selected>...</option>
-                                        <option>... - 400</option>
-                                        <option>400 - 600</option>
-                                        <option>600 - 800</option>
-                                        <option>800 - ...</option>
+                                        <option value="0">...</option>
+                                        <option value="1">... - 400</option>
+                                        <option value="2">400 - 600</option>
+                                        <option value="3">600 - 800</option>
+                                        <option value="4">800 - ...</option>
                                     </select>
                                 </div>
                             </div>
@@ -227,298 +203,61 @@
         <div class="col-md" id="showCase">
             <div class="row" style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px; background-color:#F5F5F5; border-radius: 10px; font-weight: bold; margin-bottom: 10px;">
                 <div class="row">
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek3.jpg" alt="Card image cap" style="height: 165px;" >
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">TEST</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Merkez/Çarşı Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek2.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">TEST</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Anadolu Mahallesi/143.Cadde</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek3.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">TEST</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Fatih Mahallesi/Yıldırım Sokak</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek2.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">TEST</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Anadolu Mahallesi/Alparslan Türkeş Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek2.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">TEST</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Gökçay Mahallesi/İstasyon Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek3.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">TEST</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Anadolu Mahallesi/Alparslan Türkeş Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek3.jpg" alt="Card image cap" style="height: 165px;" >
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">Meryem Apart</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Merkez/Çarşı Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek2.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">Hasan Cantürk Yurdu</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Anadolu Mahallesi/143.Cadde</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek3.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">Çağdaş Apart</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Fatih Mahallesi/Yıldırım Sokak</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek2.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">İlke Erkek Öğrenci Yurdu</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Anadolu Mahallesi/Alparslan Türkeş Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek2.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">Koçoğlu Apart</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Gökçay Mahallesi/İstasyon Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card vitrinbox">
-                            <img class="card-img-top" src="images/yurtOrnek3.jpg" alt="Card image cap" style="height: 165px;">
-                            <div class="card-body">
-                                <p class="card-title" style="text-align: center;">Bilal Yurt</p>
-                                <p class="card-text" style="font-size: small;">Isparta/Anadolu Mahallesi/Alparslan Türkeş Caddesi</p>
-                                <div class="imageTopRight">
-                                    <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15">5</p>
-                                </div>
-                                <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="btn-group " role="group" aria-label="First group" style="Margin: 0px auto;">
-                    <a href="#" class="btn btn-secondary" role="button">1</a>
-                    <a href="#" class="btn btn-secondary" role="button">2</a>
-                    <a href="#" class="btn btn-secondary" role="button">3</a>
-                    <a href="#" class="btn btn-secondary" role="button">4</a>
-                </div>
-            </div>
-        </div>
+                    <%
+                        List<Advert> advertList = (List<Advert>)application.getAttribute("showCaseList");
+                        if (advertList==null || advertList.isEmpty()){
 
 
+                    %>
 
+                    <%
+                        }else {
+                            for (Advert advert:advertList) {
+                    %>
 
-
-
-        <!-- LOGİN -->
-
-
-
-<%
-    String loginStatus = (String) application.getAttribute("login");
-    if(session.getAttribute("login")==null){
-
-%>
-
-        <div class="col-md-3" id="login">
-            <a name="loginIsinla">
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg" style="background-color: #F5F5F5; border-radius: 10px;">
-                        <div id="uyeGirisKutusu">
-                            <form class="was-validated" action="login" method="post">
-                                <div class="form-group">
-                                    <s:textfield name="loginName" id="userName" cssClass="form-control is-invalid loginInputs"
-                                           placeholder="Kullanıcı Adı veya e-Mail adresi" maxlength="50"/>
-                                    <s:password name="loginPassword" id="password" cssClass="form-control is-invalid loginInputs"
-                                           rows="4" maxlength="20" placeholder="Şifre"/>
-                                    <p style="width: 100%; font-weight: bold; font-size: x-small;">İlan verebilmek için için giriş yapmalısınız.</p>
-                                    <s:submit id="loginButton" cssStyle="cursor: pointer; float: right; margin-bottom: 10px; margin-top: 20px;" cssClass="btn btn-outline-primary" value="Giriş Yap"/>
-                                </div>
-                            </form>
-                            <!-- Button to open the modal -->
-                            <button class="btn btn-outline-success" onclick="document.getElementById('id01').style.display='block'" style="margin-top: 5px; margin-bottom: 10px;">Kayıt Ol</button>
-                        </div>
-                        <div id="uyeBilgileri">
-                            <p>Kullanıcı Adı <span style="font-weight: bold;">bilalKocoglu</span></p>
-                            <a style="float: right; margin-top: 15px; margin-bottom: 15px;" class="btn btn-danger" href="#" role="button">Çıkış Yap</a>
-                            <a style="float: left; margin-top: 15px; margin-bottom: 15px;" class="btn btn-warning" href="#" role="button">Favorilerim</a>
-                        </div>
-
-
-                        <!-- The Modal (contains the Sign Up form) -->
-                        <div id="id01" class="modal">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <form class="modal-content animate" action="createUser" >
-                                <div class="container">
-                                    <s:textfield id="newAd" cssClass="newUserTexts" name="newName" maxLength="50" required="true" label="Ad " placeholder="Ad " labelposition="top"/>
-
-                                    <s:textfield id="newSoyad" cssClass="newUserTexts" name="newLastName" maxLength="50" required="true" label="Soyad " placeholder="Soyad" labelposition="top"/>
-
-                                    <s:textfield id="newUsername" cssClass="newUserTexts" name="newEmail" maxLength="60" required="true" label="Email veya Kullanıcı Adı" placeholder="eMail veya Kullanıcı Adı" labelposition="top"/>
-
-                                    <s:password id="newPassword" cssClass="newUserTexts" name="newPass" maxLength="20" required="true" label="Şifre" placeholder="Şifre" labelposition="top"/>
-
-                                    <s:password id="newPasswordAgain" cssClass="newUserTexts" name="newPassAgain" maxLength="20" required="true" label="Şifre Tekrar" placeholder="Şifre Tekrar" labelposition="top"/>
-
-                                    <s:submit id="newUserButton" cssClass="btn btn-success" value="Kayıt Ol"/>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg">
-                        <div id="accordion" role="tablist">
-                            <div class="card" style="margin-top: 15px;">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration: none">
-                                            Şehirler
-                                        </a>
-                                    </h5>
-                                </div>
-
-                                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="col-sm-4 col-md-4">
+                                <div class="card vitrinbox">
+                                    <img class="card-img-top" src="<s:url value="image.action"/>?advertId=<%=advert.getId()%>" alt="Card image cap" style="height: 165px;" >
                                     <div class="card-body">
-                                        <p class="sehirler">
-                                            Isparta
-                                        </p>
+                                        <p class="card-title" style="text-align: center;"><%=advert.getName()%></p>
+                                        <p class="card-text" style="font-size: small;"><%=advert.getCity().getCityName()%>/<%=advert.getDistrict()%>/<%=advert.getNeighborhood()%></p>
+                                        <div class="imageTopRight">
+                                            <p style="text-align: right;"><img src="images/starIcon.png" width="15" height="15"><%=advert.getStar()%></p>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-info" style="bottom: 10px; position: absolute;">Detaylı İncele</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
+
+                    <%
+                            }
+                        }
+                    %>
+
                 </div>
-        </div>
+            </div>
 
-        <%
-            }
-            if (session.getAttribute("login")!=null){
-
-        %>
-        <div class="col-md-3" id="login">
-            <a name="loginIsinla">
+            <!--        SAYFA GEÇİŞLERİ
                 <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg" style="background-color: #F5F5F5; border-radius: 10px;">
-                        <div id="uyeBilgileri2">
-                            <p style="margin-top: 5px;">Admin <span style="font-weight: bold;"><%=session.getAttribute("login")%></span></p>
-                            <a style="float: right; margin-top: 15px; margin-bottom: 15px; width: 100%;" class="btn btn-danger" href="#" role="button">Çıkış Yap</a>
-                        </div>
-
+                    <div class="btn-group " role="group" aria-label="First group" style="Margin: 0px auto;">
+                        <a href="#" class="btn btn-secondary" role="button">1</a>
+                        <a href="#" class="btn btn-secondary" role="button">2</a>
+                        <a href="#" class="btn btn-secondary" role="button">3</a>
+                        <a href="#" class="btn btn-secondary" role="button">4</a>
                     </div>
-                    <div class="col-lg-1"></div>
                 </div>
+            -->
         </div>
 
-        <%
-            }
-        %>
-    </div>
-</div>
 
+
+
+
+
+<!-- LOGİN -->
+
+
+<jsp:directive.include file="login.jsp" />
 
 
 <!-- FOOTER -->
@@ -537,6 +276,9 @@
         <p id="errorText" style="font-weight: bold; text-align: center; margin-top: 25px;">Yanlış bir mail adresi girdiniz.<br>Lütfen tekrar deneyin.</p>
     </div>
 </div>
+
+
+<!-- SCRIPTS -->
 
 <jsp:directive.include file="scripts.jsp" />
 

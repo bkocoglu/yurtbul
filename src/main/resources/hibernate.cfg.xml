@@ -26,5 +26,6 @@
       <mapping class="com.model.entities.User"/>
     <mapping class="com.model.entities.City"/>
     <mapping class="com.model.entities.Images"/>
+    <mapping class="com.model.entities.Comment"/>
   </session-factory>
 </hibernate-configuration>
