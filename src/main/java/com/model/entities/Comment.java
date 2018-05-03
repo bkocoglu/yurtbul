@@ -13,16 +13,17 @@ public class Comment {
     @ManyToOne()
     private Advert advert;
 
-    private Date date;
+    private String date;
     private String senderName;
     private String commentText;
     private int star;
     private boolean approval;       //onay
 
     public Comment() {
+
     }
 
-    public Comment(Advert advert, Date date, String senderName, String commentText, int star, boolean approval) {
+    public Comment(Advert advert, String date, String senderName, String commentText, int star, boolean approval) {
         this.advert = advert;
         this.date = date;
         this.senderName = senderName;
@@ -35,16 +36,16 @@ public class Comment {
         return approval;
     }
 
-    public void setApproval(boolean approval) {
-        this.approval = approval;
-    }
-
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public void setApproval(boolean approval) {
+        this.approval = approval;
     }
 
     public Advert getAdvert() {

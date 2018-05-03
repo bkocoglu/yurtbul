@@ -59,6 +59,14 @@ public class Advert {
         this.user = user;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public float getStar() {
         return star;
     }
@@ -161,5 +169,24 @@ public class Advert {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    @Override
+    public String toString() {
+        return "Advert{" +
+                "name='" + name + '\'' +
+                ", advertType=" + advertType +
+                ", city=" + city +
+                ", district='" + district + '\'' +
+                ", neighborhood='" + neighborhood + '\'' +
+                ", addressDetail='" + addressDetail + '\'' +
+                ", coordinateLatitude=" + coordinateLatitude +
+                ", coordinateLongitude=" + coordinateLongitude +
+                ", explanation='" + explanation + '\'' +
+                ", price=" + price +
+                ", telephone='" + telephone + '\'' +
+                ", star=" + star +
+                ", user=" + user +
+                '}';
     }
 }

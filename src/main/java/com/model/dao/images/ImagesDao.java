@@ -11,4 +11,6 @@ public interface ImagesDao {
     public List<Images> findByAdvert(Advert advert);
 
     public Images getMainImages(Advert advert);
+
+    public List<Integer> getImagesId(Advert advert);
 }

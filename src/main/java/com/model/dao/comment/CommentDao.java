@@ -11,4 +11,10 @@ public interface CommentDao {
 
     public List<Comment> findByAdvert(Advert advert);
 
+    public List<Comment> getNotifiedComment(Advert advert);
+
+    public Comment findById(int id);
+
+    public List<Integer> getStars(Advert advert);
+
 }

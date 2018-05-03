@@ -89,8 +89,8 @@
                                     <div class="card-body">
                                         <%
                                             HashSet<String> hashSet = new HashSet();
-                                            for (Advert advert: adverts) {
-                                                hashSet.add(advert.getCity().getCityName());
+                                            for (Advert advert1: adverts) {
+                                                hashSet.add(advert1.getCity().getCityName());
                                             }
                                             for (String city :hashSet){
 

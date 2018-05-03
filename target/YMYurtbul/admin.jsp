@@ -64,7 +64,7 @@
     <div class="row" id="homePage" style="margin: 0px;">
         <div class="col-md-2" id="yanMenu" style="padding-right: 20px; padding-left: 20px;">
             <button id="mekanEkleButton" class="button btn btn-info col-lg" style="width: 100%; margin-left: 0px;"><span>Mekan Ekle</span></button>
-            <button id="yorumlarButton" class="button btn btn-info col-lg" style="width: 100%; margin-left: 0px;"><span>Onay Bekleyen<br> Yorumlar(<%=application.getAttribute("commentCount")%>)</span></button>
+            <button id="yorumlarButton" class="button btn btn-info col-lg" style="width: 100%; margin-left: 0px;"><span>Onay Bekleyen<br> Yorumlar(<%=((List<Comment>)application.getAttribute("pendingComments")).size()%>)</span></button>
             <button id="goruntulenmeButton" class="button btn btn-info col-lg" style="width: 100%; margin-left: 0px;"><span>İlanlarım(<%=((List<Advert>)(application.getAttribute("advertList"))).size()%>)</span></button>
         </div>
 
@@ -131,11 +131,11 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="inputsLabel">Koordinatlar(Enlem)</label>
-                                <input name="coordinateLatitude" type="number" step="0.000000000001" class="form-control is-invalid inputsItem" placeholder="Enlem" required/>
+                                <input name="coordinateLatitude" type="number" step="0.000000000000001" class="form-control is-invalid inputsItem" placeholder="Enlem" required/>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="inputsLabel">Koordinatlar(Boylam)</label>
-                                <input name="coordinateLongitude" type="number" step="0.00000000001" class="form-control is-invalid inputsItem" placeholder="Boylam" required/>
+                                <input name="coordinateLongitude" type="number" step="0.000000000000001" class="form-control is-invalid inputsItem" placeholder="Boylam" required/>
                             </div>
                             <p style="width: 100%; font-weight: bold; font-size: x-small; margin-bottom: 10px;">
                                 İşletmenizin Google Map'te gözükebilmesi için doğru koordinatları girmeniz tavsiye edilir.
@@ -179,16 +179,6 @@
                                 <label class="inputsLabel">Fotoğraf</label>
                                 <input name="photo2" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="inputsLabel">Fotoğraf</label>
-                                <input name="photo3" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="inputsLabel">Fotoğraf</label>
-                                <input name="photo4" type="file" class="form-control-file inputsItem" accept="image/gif,image/jpeg,image/jpg,image/png" style="margin-bottom: 0px;">
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -224,8 +214,8 @@
                             <p class="yorumYapan"><%= comment.getSenderName() %><span style="float: right;"><%= comment.getDate() %></span></p>
                             <p class="yorumMetni"><%= comment.getCommentText() %></p>
                             <div style="width: 100%; text-align: center; margin-top: 10px;">
-                                <a class="btn btn-success" href="#" role="button">Onayla</a>
-                                <a style="padding-left: 30px; padding-right: 30px; margin-left: 20px;" class="btn btn-danger" href="#" role="button">Sil</a>
+                                <a class="btn btn-success" href="<s:url value="commentAccept.action"/>?islem=ekle&commentId=<%=comment.getCommentId()%>" role="button">Onayla</a>
+                                <a style="padding-left: 30px; padding-right: 30px; margin-left: 20px;" class="btn btn-danger" href="<s:url value="commentAccept.action"/>?islem=sil&commentId=<%=comment.getCommentId()%>" role="button">Sil</a>
                             </div>
                         </div>
                 <%

@@ -20,9 +20,17 @@ public class ShowImage extends ActionSupport {
 
             String advertIdString = ServletActionContext.getRequest().getParameter("advertId");
 
-            Advert advert = advertDao.findById(Integer.parseInt(advertIdString));
+            String imageId = ServletActionContext.getRequest().getParameter("imageId");
 
-            Images images = imagesDao.getMainImages(advert);
+            Images images;
+            if (imageId == null){
+                Advert advert = advertDao.findById(Integer.parseInt(advertIdString));
+
+                images = imagesDao.getMainImages(advert);
+            }else {
+                images = imagesDao.findById(Integer.parseInt(imageId));
+            }
+
 
             HttpServletResponse response = ServletActionContext.getResponse();
             response.reset();

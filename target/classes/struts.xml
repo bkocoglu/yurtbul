@@ -6,22 +6,22 @@
 
 <struts>
     <package name="App" extends="struts-default">
-        <action name="createUser" class="com.controller.NewUser" method="execute">
+        <action name="createUser" class="com.controller.indexController.NewUser" method="execute">
             <result name="success">/index.jsp</result>
             <result name="error">/index.jsp</result>
         </action>
 
-        <action name="createProposal" class="com.controller.ProposalPost2" method="execute">
+        <action name="createProposal" class="com.controller.indexController.ProposalPost2" method="execute">
             <result name="success">/index.jsp</result>
             <result name="error">/index.jsp</result>
         </action>
 
-        <action name="login" class="com.controller.Login" method="execute">
+        <action name="login" class="com.controller.indexController.Login" method="execute">
             <result name="success">/admin.jsp</result>
             <result name="error">/index.jsp</result>
         </action>
 
-        <action name="createAdvert" class="com.controller.NewAdvert" method="execute">
+        <action name="createAdvert" class="com.controller.adminController.NewAdvert" method="execute">
             <interceptor-ref name="fileUpload">
                 <param name="maximumSize">102097152</param>
                 <param name="allowedTypes">
@@ -38,18 +38,39 @@
             <result name="success">/admin.jsp</result>
         </action>
 
-        <action name="logout" class="com.controller.Logout">
+        <action name="logout" class="com.controller.adminController.Logout">
             <result name="success">/index.jsp</result>
             <result name="error">/admin.jsp</result>
         </action>
 
-        <action name="deleteAdvert" class="com.controller.DeleteAdvert">
+        <action name="deleteAdvert" class="com.controller.adminController.DeleteAdvert">
             <result name="success">/admin.jsp</result>
             <result name="error">/admin.jsp</result>
         </action>
 
-        <action name="advertFilter" class="com.controller.AdvertFilter">
-            <result name="success">/index.jsp</result>
+        <action name="advertFilter" class="com.controller.indexController.AdvertFilter">
+            <result name="success">/filter.jsp</result>
+            <result name="error">/filter.jsp</result>
+        </action>
+
+        <action name="advertView" class="com.controller.showAdvert.AdvertDetailShow">
+            <result name="success">/advertDetail.jsp</result>
+            <result name="error">/advertDetail.jsp</result>
+        </action>
+
+        <action name="postComment" class="com.controller.showAdvert.PostComment">
+            <result name="success">/advertDetail.jsp</result>
+            <result name="error">/advertDetail.jsp</result>
+        </action>
+
+        <action name="commentAccept" class="com.controller.adminController.CommentAccept">
+            <result name="success">/admin.jsp</result>
+            <result name="error">/admin.jsp</result>
+        </action>
+
+        <action name="search" class="com.controller.Search">
+            <result name="success">/filter.jsp</result>
+            <result name="error">/filter.jsp</result>
         </action>
     </package>
 

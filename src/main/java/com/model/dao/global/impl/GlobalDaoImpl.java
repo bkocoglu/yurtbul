@@ -25,6 +25,23 @@ public class GlobalDaoImpl implements GlobalDao {
         }
     }
 
+    public boolean update(Object entity) {
+        Session session = openSession();
+        session.getTransaction().begin();
+        try{
+            session.update(entity);
+            System.out.println(session.getTransaction().getStatus());
+            session.getTransaction().commit();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }finally {
+            session.close();
+        }
+    }
+
     public boolean delete(Object entity) {
         Session session = openSession();
         session.getTransaction().begin();
