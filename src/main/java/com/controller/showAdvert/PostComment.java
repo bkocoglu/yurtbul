@@ -1,8 +1,7 @@
 package com.controller.showAdvert;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.global.GlobalDao;
-import com.model.dao.global.impl.GlobalDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.Comment;
 import com.opensymphony.xwork2.ActionSupport;

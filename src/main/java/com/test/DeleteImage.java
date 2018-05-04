@@ -1,7 +1,7 @@
 package com.test;
 
-import com.model.dao.global.impl.GlobalDaoImpl;
-import com.model.dao.images.impl.ImagesDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
+import com.dao.impl.ImagesDaoImpl;
 import com.model.entities.Images;
 
 public class DeleteImage {

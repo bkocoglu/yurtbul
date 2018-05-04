@@ -1,13 +1,5 @@
 package com.test;
 
-import com.model.dao.HibernateUtil;
-import com.model.entities.Advert;
-import com.model.entities.AdvertType;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-
-import java.util.List;
-
 public class ManyToOneTest {
     public static void main(String [] args){
        /* AdvertType type1 = new AdvertType("apart");

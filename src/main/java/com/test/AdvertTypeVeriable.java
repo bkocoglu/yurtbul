@@ -1,9 +1,8 @@
 package com.test;
 
-import com.model.dao.advertType.impl.TypeDaoImpl;
-import com.model.dao.city.impl.CityDaoImpl;
-import com.model.dao.global.impl.GlobalDaoImpl;
-import com.model.entities.AdvertType;
+import com.dao.impl.TypeDaoImpl;
+import com.dao.impl.CityDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
 
 public class AdvertTypeVeriable {
     public static void main(String [] args){

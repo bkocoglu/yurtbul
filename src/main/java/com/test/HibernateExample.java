@@ -1,7 +1,7 @@
 package com.test;
 
 
-import com.model.dao.HibernateUtil;
+import com.utils.HibernateUtil;
 import org.hibernate.Session;
 
 public class HibernateExample {

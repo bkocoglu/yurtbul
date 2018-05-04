@@ -1,11 +1,10 @@
 package com.controller.showAdvert;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.comment.impl.CommentDaoImpl;
-import com.model.dao.images.impl.ImagesDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.CommentDaoImpl;
+import com.dao.impl.ImagesDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.Comment;
-import com.model.entities.Images;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.dispatcher.SessionMap;

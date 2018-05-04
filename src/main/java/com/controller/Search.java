@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.model.dao.global.impl.GlobalDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
 import com.model.entities.Advert;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.dispatcher.SessionMap;

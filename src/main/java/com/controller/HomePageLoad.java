@@ -1,11 +1,10 @@
 package com.controller;
 
 
-import com.model.dao.global.impl.GlobalDaoImpl;
-import com.model.dao.images.impl.ImagesDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
+import com.dao.impl.ImagesDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.City;
-import com.model.entities.Images;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.List;
 
 @WebServlet(name = "LoadServlet" , urlPatterns = "/load")

@@ -1,7 +1,7 @@
 package com.controller;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.images.impl.ImagesDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.ImagesDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.Images;
 import com.opensymphony.xwork2.ActionSupport;

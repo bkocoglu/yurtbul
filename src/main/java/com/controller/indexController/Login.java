@@ -1,8 +1,8 @@
 package com.controller.indexController;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.comment.impl.CommentDaoImpl;
-import com.model.dao.user.impl.userDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.CommentDaoImpl;
+import com.dao.impl.userDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.Comment;
 import com.model.entities.User;

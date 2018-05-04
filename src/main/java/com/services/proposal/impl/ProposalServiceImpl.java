@@ -1,7 +1,7 @@
 package com.services.proposal.impl;
 
-import com.model.dao.global.impl.GlobalDaoImpl;
-import com.model.dao.proposal.impl.ProposalDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
+import com.dao.impl.ProposalDaoImpl;
 import com.model.entities.Proposal;
 import com.services.proposal.ProposalService;
 

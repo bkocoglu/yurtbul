@@ -1,9 +1,9 @@
 package com.controller.adminController;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.comment.impl.CommentDaoImpl;
-import com.model.dao.global.impl.GlobalDaoImpl;
-import com.model.dao.images.impl.ImagesDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.CommentDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
+import com.dao.impl.ImagesDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.Comment;
 import com.model.entities.Images;

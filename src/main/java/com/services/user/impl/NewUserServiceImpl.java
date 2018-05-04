@@ -1,7 +1,7 @@
 package com.services.user.impl;
 
-import com.model.dao.global.impl.GlobalDaoImpl;
-import com.model.dao.user.impl.userDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
+import com.dao.impl.userDaoImpl;
 import com.model.entities.User;
 import com.services.user.NewUserService;
 

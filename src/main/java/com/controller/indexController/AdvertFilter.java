@@ -1,8 +1,8 @@
 package com.controller.indexController;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.advertType.impl.TypeDaoImpl;
-import com.model.dao.city.impl.CityDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.TypeDaoImpl;
+import com.dao.impl.CityDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.AdvertType;
 import com.model.entities.City;

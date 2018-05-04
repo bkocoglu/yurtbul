@@ -1,8 +1,8 @@
 package com.controller.adminController;
 
-import com.model.dao.advertType.impl.TypeDaoImpl;
-import com.model.dao.city.impl.CityDaoImpl;
-import com.model.dao.global.impl.GlobalDaoImpl;
+import com.dao.impl.TypeDaoImpl;
+import com.dao.impl.CityDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
 import com.model.entities.*;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;

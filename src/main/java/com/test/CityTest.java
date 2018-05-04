@@ -1,7 +1,7 @@
 package com.test;
 
-import com.model.dao.city.impl.CityDaoImpl;
-import com.model.dao.global.impl.GlobalDaoImpl;
+import com.dao.impl.CityDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
 import com.model.entities.City;
 
 public class CityTest {

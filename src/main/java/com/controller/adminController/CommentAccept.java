@@ -1,8 +1,8 @@
 package com.controller.adminController;
 
-import com.model.dao.advert.impl.AdvertDaoImpl;
-import com.model.dao.comment.impl.CommentDaoImpl;
-import com.model.dao.global.impl.GlobalDaoImpl;
+import com.dao.impl.AdvertDaoImpl;
+import com.dao.impl.CommentDaoImpl;
+import com.dao.impl.GlobalDaoImpl;
 import com.model.entities.Advert;
 import com.model.entities.Comment;
 import com.opensymphony.xwork2.ActionSupport;
@@ -12,7 +12,6 @@ import org.apache.struts2.interceptor.SessionAware;
 import org.apache.struts2.util.ServletContextAware;
 
 import javax.servlet.ServletContext;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 
