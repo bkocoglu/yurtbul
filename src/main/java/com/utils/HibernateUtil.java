@@ -7,9 +7,9 @@ import org.hibernate.cfg.Configuration;
  * Created by pC2 on 25.07.2017.
  */
 public class HibernateUtil {
-    private static final SessionFactory sessionFactory = bulidSessionFactory();
+    private static final SessionFactory sessionFactory = buildSessionFactory();
 
-    private static SessionFactory bulidSessionFactory(){
+    private static SessionFactory buildSessionFactory(){
         try{
             return new Configuration().configure().buildSessionFactory();
         }catch(Exception e){
